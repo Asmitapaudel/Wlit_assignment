@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var value=50
+        function myFunction(){
+           var value=100
+            alert("value: "+ value)
+            alert("This value: " + this.value)
+        }
+        myFunction()
+    </script>
+    <script>
+        // with an Object
+
+        const random={
+            name:"Asmita",
+            info(){
+                console.log("HI " +this.name)
+            }
+        }
+        random.info()
+    </script>
+
+      <script>
+        // with an Object
+
+        const student={
+            name:"Asmita",
+            hubby:["Dancing","travelling","Singing"],
+            info(){
+                this.hubby.forEach(function(tag){
+                    console.log(this.name,tag)
+                },this)
+            }
+        }
+        student.info()
+    </script>
+</body>
+</html>

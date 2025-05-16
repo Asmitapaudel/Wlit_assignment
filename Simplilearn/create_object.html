@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating an javascript objects</h1>
+    <h1><p id="demo"></p></h1>
+    <h2><p id="emp"></p></h2>
+    <h2><p id="car"></p></h2>
+    <script>
+        // Use object litral to create and define javascript  object 
+        var student ={
+            name:"Asmita",
+            age:21,
+            studies:"Software"
+        }
+        document.getElementById("demo").innerHTML=student.name
+     
+        // Use keyword new  to create and define javascript  object 
+        var employee=new Object()
+        employee.name="Simran"
+        employee.salaray=50000
+        document.getElementById("emp").innerHTML=employee.name
+
+        // Use an Object constructor  to create and define javascript  object 
+
+        function cars(brand,price,model){
+            this.brand=brand;
+            this.price=price;
+            this.model=model;
+        };
+        var c1=new cars("BMW",300000,2025)
+        document.getElementById("car").innerHTML="Brand: " + c1.brand + ", Price: " + c1.price + ", Model: " + c1.model;
+
+
+    </script>
+</body>
+</html>

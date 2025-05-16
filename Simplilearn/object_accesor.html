@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<h2><p id="set">
+
+</p></h2>
+    <script>
+
+        var student ={
+            name:"Asmita",
+            age:21,
+            studies:"Software", 
+            get studentName(){
+                return this.name
+            }
+        }
+
+        document.getElementById("demo").innerHTML=student.studentName
+
+        var car={
+            brand:"BMW",
+            model:2025,
+            fule_type:"Diesel",
+
+            set fule(fule){
+                this.fule_type=fule
+            }
+        }
+        car.fule="petrol"
+                document.getElementById("set").innerHTML= car.fule_type
+
+    </script>
+</body>
+</html>
