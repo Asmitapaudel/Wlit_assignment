@@ -59,5 +59,20 @@ document.write() //write into a browser
     
 -->
 
+# Regular Expression(REGEXE)
+- Flag:
+    ->g: Globel
+    ->i: ignore case
+    ->m: multiple line
+    ->u: unicode
+    ->y: find all consecutive/adjeent match
 
-# Async/Awit
+- Patterns:
+    -> [a,b]:find all character from a to b (lowercase only)
+    -> [0,9]: find only digit between 0 to 9
+    -> [a-b|0-9]: find any character of digits seperated by "| "
+
+- Quantifiers
+    -> N+: one or more 
+    -> N*: zero or more
+    ->N?: zero or one
