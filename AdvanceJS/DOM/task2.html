@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="sizeForm">
+    <h2 id="content">Content</h2>
+
+    <div>
+      Enter a color: <input type="text" id="colorInput" placeholder="Enter a color">
+    </div>
+
+    <div>
+      Enter a Background color: <input type="text" id="bgcolorInput" placeholder="Enter a background color">
+    </div>
+
+    <div>
+      Enter Text: <input type="text" id="textValueInput" placeholder="Enter a text">
+    </div>
+
+    <button type="submit">Change</button>
+  </form>
+
+  <script>
+    const colorInput = document.getElementById("colorInput");
+    const bgcolorInput = document.getElementById("bgcolorInput");
+    const textValueInput = document.getElementById("textValueInput");
+    const changeText = document.getElementById("content");
+
+    const form = document.getElementById("sizeForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const textColor = colorInput.value.trim();
+      const bgColor = bgcolorInput.value.trim();
+      const newText = textValueInput.value.trim();
+
+      if (textColor) {
+        changeText.style.color = textColor;
+      }
+
+      if (bgColor) {
+        changeText.style.backgroundColor = bgColor;
+      }
+
+      if (newText) {
+        changeText.textContent = newText;
+      }
+    });
+  </script>
+</body>
+</html>
