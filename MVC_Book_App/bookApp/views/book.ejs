@@ -24,7 +24,11 @@
             <p class="card-subtitle text-muted mb-2">Genre: <%= book.genre %></p>
 
             <a href="/books/edit/<%= book._id %>" class="btn btn-primary btn-sm">Edit</a>
-            <a href="/books/delete/<%= book._id %>" class="btn btn-danger btn-sm">Delete</a>
+            <!-- <a href="/books/delete/<%= book._id %>" class="btn btn-danger btn-sm">Delete</a> -->
+             <form method="POST" action="/books/delete/<%= book._id %>" style="display:inline;">
+  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+</form>
+
           </div>
         </div>
       <% }); %>

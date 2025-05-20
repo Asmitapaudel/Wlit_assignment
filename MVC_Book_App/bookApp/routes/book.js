@@ -31,6 +31,15 @@ router.post("/saveEdited/:_id", function (req, res, next) {
   res.redirect("/books");
 });
 
+router.post("/delete/:_id", function (req, res) {
+  const book_id = req.params._id;
+  const currIndex = books.findIndex((book) => book._id === book_id);
+  if (currIndex === -1) return res.status(404).send("Book not found");
+
+  books.splice(currIndex, 1);
+  res.redirect("/books");
+});
+
 
 
 
