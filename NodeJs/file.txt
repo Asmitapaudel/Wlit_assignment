@@ -1,1 +1,1 @@
-hello form file.txt
+Hello from fd.write!
