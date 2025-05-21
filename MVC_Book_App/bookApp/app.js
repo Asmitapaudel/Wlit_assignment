@@ -4,10 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const mongoose=require('mongoose')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const bookRouter = require('./routes/book'); // or similar
+
+mongoose.connect('mongodb+srv://Asmita:Atlast123@cluster0.wsjcbdj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+.then(()=>console.log('connected'))
+.catch((err)=>console.error("Error",err))
 var app = express();
 
 
